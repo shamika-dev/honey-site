@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey site</title>
+    <script type="module" src="/src/main.js"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#F7F3F0] text-black font-sans">
+
+    <!-- Main Hero Section -->
+    <section class="bg-[#F7F3F0] text-neutral-800 font-sans min-h-screen relative overflow-hidden hero-section">
+        
+        <!-- === Decorative Elements (Absolute Positioning with will-change-transform) === -->
+        
+        <!-- Top Left Leaf -->
+        <img src="public/leaf2.png" alt="" 
+        class="absolute top-56 -left-4 w-16 lg:top-20 lg:w-32 h-auto object-contain z-0 pointer-events-none floating-item will-change-transform" data-speed="0.15">
+        
+        <!-- Bottom Left Leaf -->
+        <img src="public/" alt="" 
+        class="hidden 2xl:block absolute bottom-0 left-0 w-24 h-auto object-contain z-0 pointer-events-none floating-item will-change-transform" data-speed="0.05">
+        
+        <!-- Right Top Bee -->
+        <img src="public//bee4.png" alt="" 
+        class="hidden lg:block absolute top-28 right-20 w-16 h-auto object-contain z-0 pointer-events-none floating-item will-change-transform" data-speed="0.25">
+        
+        <!-- Right Bottom Bee -->
+        <img src="public//bee2.png" alt="" 
+        class="hidden lg:block absolute bottom-32 right-32 w-16 h-auto object-contain z-0 pointer-events-none floating-item will-change-transform" data-speed="0.2">
+        
+        <!-- Middle Bee -->
+        <img src="public//bee.png" alt="" 
+        class="hidden lg:block absolute top-60 left-[400px] w-16 h-auto object-contain z-0 pointer-events-none floating-item will-change-transform" data-speed="0.3">
+
+        <!-- Bottom Right Leaf -->
+        <img src="public//leaf3.png" alt="" 
+        class="absolute bottom-0 -right-4 w-28 lg:w-40 h-auto object-contain z-20 pointer-events-none floating-item will-change-transform" data-speed="0.1">
+        
+        <!-- Big Draw Icon -->
+        <img src="public//big drow icon.png" alt="" 
+        class="block absolute top-56 right-0 h-auto object-contain z-20 pointer-events-none floating-item will-change-transform" data-speed="0.12">
+
+        <!-- === End Decorative Elements === -->
+
+        <!-- Navbar -->
+        <header class="flex justify-between items-center px-6 lg:px-12 py-6 max-w-[1300px] mx-auto relative z-10">
+            <img src="public//nav bar logo.png" alt="Logo">
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#home" class="text-orange-600">HOME</a>
+                <a href="#about-us" class="hover:text-orange-600">ABOUT US</a>
+                <a href="#product" class="hover:text-orange-600">PRODUCTS</a>
+                <a href="#gallery" class="hover:text-orange-600">GALLERY</a>
+                <a href="#contact" class="hover:text-orange-600">CONTACT US</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+<button id="menu-btn" class="md:hidden text-neutral-800 focus:outline-none">
+    <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+</button>
+
+            <button class="hidden md:block bg-[#D4A373] text-white px-5 py-2 text-sm rounded font-medium transition duration-400 ease-in-out hover:-translate-y-1 hover:shadow-xl">CONTACT</button>
+        </header>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden flex flex-col w-full bg-[#97897d] border-b border-neutral-300 shadow-md py-6 px-6 z-50">
+            <nav class="flex flex-col gap-4 text-sm font-medium text-center">
+                <a href="#home" class="text-orange-600 py-2">HOME</a>
+                <a href="#about-us" class="hover:text-orange-600 py-2">ABOUT US</a>
+                <a href="#product" class="hover:text-orange-600 py-2">PRODUCTS</a>
+                <a href="#gallery" class="hover:text-orange-600 py-2">GALLERY</a>
+                <a href="#contact" class="hover:text-orange-600 py-2">CONTACT US</a>
+                <button class="bg-[#D4A373] text-white px-5 py-2 text-sm rounded font-medium mt-2">CONTACT</button>
+            </nav>
+        </div>
+
+        <!-- Hero Section Content -->
+        <div class="max-w-[1300px] mx-auto lg:mt-[95px] px-6 lg:px-12 py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10" id="home">
+            <div class="text-center lg:text-left">
+                <p class="text-xs md:text-sm tracking-widest font-semibold text-neutral-600 mb-4 will-change-transform">FRESH & SWEET AS HONEY.</p>
+                
+                <h1 class="text-6xl sm:text-6xl lg:text-[136px] font-extrabold leading-tight lg:leading-[120px] mb-3 relative inline-block will-change-transform">
+                    <span class="relative z-10">HONEY <br>BEE</span>
+                </h1>
+                
+                <p class="text-sm text-neutral-600 max-w-md mt-5 mx-auto lg:mx-0 will-change-transform">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
+                
+                <button class="bg-[#C85A17] text-white text-xs px-6 py-3 font-bold tracking-wider rounded mt-6 relative z-10 shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl will-change-transform">VIEW MORE</button>
+            </div>
+            
+            <div class="relative z-10">
+                <img src="public//hero main image.png" alt="Honey Jar" class="w-full object-contain max-h-[350px] sm:max-h-[450px] lg:max-h-full mx-auto will-change-transform">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="max-w-[1300px] mx-auto px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-12" id="about-us">
+        <!-- Mission (2 Columns width) -->
+        <div class="md:col-span-2">
+            <img src="public//our-miison.png" alt="Our Mission">
+            <h2 class="text-2xl font-bold mt-4">OUR MISSION</h2>
+            <p class="text-sm font-semibold mb-3">The bees live as they naturally would and their benefits reach more people.</p>
+            <p class="text-sm text-neutral-600 leading-relaxed mb-6">
+                Our goal is to raise San Diego's bee population throughout the city and at the same time spread awareness among the community.
+            </p>
+        </div>
+        
+        <!-- News (1 Column width) -->
+        <div class="bg-white p-8 md:border-t-0 md:border-l border-neutral-300 md:p-8">
+            <h2 class="text-xl font-bold mb-6">NEWS</h2>
+            <div class="space-y-6 text-sm">
+                <div>
+                    <span class="text-xs text-orange-600 font-semibold">MAY 14, 2020</span>
+                    <h4 class="font-bold mt-1">SWEET HONEY PACKS FRESH RAW AND UNFILTERED</h4>
+                </div>
+                <div>
+                    <span class="text-xs text-orange-600 font-semibold">MAY 14, 2020</span>
+                    <h4 class="font-bold mt-1">RAW BEE HONEY PRODUCTS AND BEEKEEPING</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="max-w-7xl mx-auto px-12 py-16 text-center" id="product">
+        <h2 class="text-3xl font-bold mb-2">OUR PRODUCTS</h2>
+        <p class="text-sm text-neutral-600 mb-12">Check out our online shop for cute bee-themed apparel, unique bee suits, educational tools, gift certificates and more.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Product Card 1 -->
+            <div class="bg-transparent p-6 rounded shadow-sm flex flex-col items-center transition duration-400 ease-in-out hover:-translate-y-1 hover:shadow-xl">
+                <img src="public//product1.png" alt="Heather Honey" class="h-48 object-contain mb-4">
+                <h4 class="font-bold text-sm">HEATHER HONEY</h4>
+                <p class="text-xs text-orange-600 font-bold my-1">.00</p>
+                <p class="text-xs text-neutral-500 mb-4 text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <button class="text-xs font-bold tracking-wider hover:text-orange-600">ADD TO CART</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-transparent p-6 rounded shadow-sm flex flex-col items-center transition duration-400 ease-in-out hover:-translate-y-1 hover:shadow-xl">
+                <img src="public//product2.png" alt="Heather Honey" class="h-48 object-contain mb-4">
+                <h4 class="font-bold text-sm">HEATHER HONEY</h4>
+                <p class="text-xs text-orange-600 font-bold my-1">.00</p>
+                <p class="text-xs text-neutral-500 mb-4 text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <button class="text-xs font-bold tracking-wider hover:text-orange-600">ADD TO CART</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="bg-transparent p-6 rounded shadow-sm flex flex-col items-center transition duration-400 ease-in-out hover:-translate-y-1 hover:shadow-xl">
+                <img src="public//product3.png" alt="Heather Honey" class="h-48 object-contain mb-4">
+                <h4 class="font-bold text-sm">HEATHER HONEY</h4>
+                <p class="text-xs text-orange-600 font-bold my-1">.00</p>
+                <p class="text-xs text-neutral-500 mb-4 text-center">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <button class="text-xs font-bold tracking-wider hover:text-orange-600">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="max-w-7xl mx-auto px-12 py-16" id="gallery">
+        <h2 class="text-3xl font-bold text-center mb-2">OUR GALLERY</h2>
+        <div class="grid grid-cols-3 gap-4 mt-8">
+            <img src="public//gallery1.png" alt="Gallery" class="w-full h-48 object-cover rounded">
+            <img src="public//gallery2.png" alt="Gallery" class="w-full h-48 object-cover rounded">
+            <img src="public//gallery3.png" alt="Gallery" class="w-full h-48 object-cover rounded">
+            <img src="public//gallery4.png" alt="Gallery" class="w-full h-48 object-cover rounded">
+            <img src="public//gallery5.png" alt="Gallery" class="w-full h-48 object-cover rounded">
+            <img src="public//gallery6.png" alt="Gallery" class="w-full h-48 object-cover rounded">
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16" id="contact">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <img src="public//honey2image.png" alt="Honey Jar and Dipper" class="w-full max-w-md lg:max-w-full object-contain">
+            </div>
+
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">NEWSLETTER SIGN UP</h2>
+                <p class="text-sm text-neutral-600 mb-6 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row max-w-md mx-auto lg:mx-0">
+                    <input type="email" placeholder="Email Address" class="w-full px-4 py-3 bg-white border border-neutral-300 text-sm focus:outline-none mb-2 sm:mb-0">
+                    <button class="bg-[#C85A17] text-white px-6 py-3 text-xs font-bold tracking-wider hover:bg-opacity-90 transition">
+                        SUBSCRIBE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Honey Section -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+        <div class="flex flex-col items-center">
+            <h2 class="text-4xl">TYPES OF HONEY</h2>
+            <p>learn more about some of other products</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-6">
+            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+                <img src="public//toh.png" alt="Forest Honey" class="rounded-2xl">
+                <div class="flex flex-col items-center px-4">
+                    <h3 class="font-semibold text-2xl">FOREST <br>HONEY</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+                <img src="public//toh2.png" alt="Creamed Honey" class="rounded-2xl">
+                <div class="flex flex-col items-center px-4">
+                    <h3 class="font-semibold text-2xl">CREAMED<br>HONEY</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+                <img src="public//toh3.png" alt="Meadow Honey" class="rounded-2xl">
+                <div class="flex flex-col items-center px-4">
+                    <h3 class="font-semibold text-2xl">MEADOW<br>HONEY</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+                </div>
+            </div>
+
+            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+                <img src="public//toh4.png" alt="Liquid Honey" class="rounded-2xl">
+                <div class="flex flex-col items-center px-4">
+                    <h3 class="font-semibold text-2xl">LIQUID <br>HONEY</h3>
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-8 bg-[#F9F6F0] flex flex-col items-center justify-center text-center">
+        <div class="flex items-center space-x-4 mb-4">
+            <a href="#" class="w-8 h-8 rounded-full bg-[#B85C38] text-white flex items-center justify-center hover:opacity-80 transition duration-300">
+                <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-[#B85C38] text-white flex items-center justify-center hover:opacity-80 transition duration-300">
+                <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-[#B85C38] text-white flex items-center justify-center hover:opacity-80 transition duration-300">
+                <i class="fa-brands fa-youtube text-sm"></i>
+            </a>
+        </div>
+
+        <div class="mb-3 text-[#B85C38]">
+            <img src="public//nav bar logo.png" alt="Footer Logo">
+        </div>
+
+        <p class="text-xs text-gray-500 font-light">
+            © 2026 shamika-dev, All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
