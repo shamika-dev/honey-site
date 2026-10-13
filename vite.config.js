@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/honey-site/', // මෙතැන ඔබේ repository එකේ නම හරියටම දෙන්න
+  base: './', // මෙතැන '/honey-site/' වෙනුවට './' ලෙස දමන්න
 })
