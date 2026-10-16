@@ -20,7 +20,7 @@
         class="absolute top-56 -left-4 w-16 lg:top-20 lg:w-32 h-auto object-contain z-0 pointer-events-none floating-item will-change-transform" data-speed="0.15">
         
         <!-- Bottom Left Leaf -->
-        <img src="public/" alt="" 
+        <img src="public/leaf1.png" alt="" 
         class="hidden 2xl:block absolute bottom-0 left-0 w-24 h-auto object-contain z-0 pointer-events-none floating-item will-change-transform" data-speed="0.05">
         
         <!-- Right Top Bee -->
@@ -59,11 +59,11 @@
             </nav>
 
             <!-- Mobile Menu Button -->
-<button id="menu-btn" class="md:hidden text-neutral-800 focus:outline-none">
-    <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-    </svg>
-</button>
+            <button id="menu-btn" class="md:hidden text-neutral-800 focus:outline-none">
+                <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
 
             <button class="hidden md:block bg-[#D4A373] text-white px-5 py-2 text-sm rounded font-medium transition duration-400 ease-in-out hover:-translate-y-1 hover:shadow-xl">CONTACT</button>
         </header>
@@ -103,7 +103,7 @@
     </section>
 
     <!-- About Us Section -->
-    <section class="max-w-[1300px] mx-auto px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-12" id="about-us">
+    <section class="max-w-[1300px] mx-auto px-6 lg:px-12 py-16 grid grid-cols-1 md:grid-cols-3 gap-12" id="about-us">
         <!-- Mission (2 Columns width) -->
         <div class="md:col-span-2">
             <img src="public//our-miison.png" alt="Our Mission">
@@ -115,7 +115,7 @@
         </div>
         
         <!-- News (1 Column width) -->
-        <div class="bg-white p-8 md:border-t-0 md:border-l border-neutral-300 md:p-8">
+        <div class="bg-white p-6 md:p-8 md:border-t-0 md:border-l border-neutral-300">
             <h2 class="text-xl font-bold mb-6">NEWS</h2>
             <div class="space-y-6 text-sm">
                 <div>
@@ -131,7 +131,7 @@
     </section>
 
     <!-- Products Section -->
-    <section class="max-w-7xl mx-auto px-12 py-16 text-center" id="product">
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16 text-center" id="product">
         <h2 class="text-3xl font-bold mb-2">OUR PRODUCTS</h2>
         <p class="text-sm text-neutral-600 mb-12">Check out our online shop for cute bee-themed apparel, unique bee suits, educational tools, gift certificates and more.</p>
         
@@ -165,10 +165,10 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="max-w-7xl mx-auto px-12 py-16" id="gallery">
+    <!-- Gallery Section (Fixed for Mobile: 1 col on mobile, 2 on sm, 3 on md/lg) -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16" id="gallery">
         <h2 class="text-3xl font-bold text-center mb-2">OUR GALLERY</h2>
-        <div class="grid grid-cols-3 gap-4 mt-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
             <img src="public//gallery1.png" alt="Gallery" class="w-full h-48 object-cover rounded">
             <img src="public//gallery2.png" alt="Gallery" class="w-full h-48 object-cover rounded">
             <img src="public//gallery3.png" alt="Gallery" class="w-full h-48 object-cover rounded">
@@ -201,43 +201,43 @@
         </div>
     </section>
 
-    <!-- Types of Honey Section -->
+    <!-- Types of Honey Section (Fixed for Mobile: flex-col on mobile, sm:flex-row on bigger screens) -->
     <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div class="flex flex-col items-center">
-            <h2 class="text-4xl">TYPES OF HONEY</h2>
-            <p>learn more about some of other products</p>
+        <div class="flex flex-col items-center text-center">
+            <h2 class="text-4xl font-bold">TYPES OF HONEY</h2>
+            <p class="text-neutral-600 text-sm mt-1">learn more about some of other products</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 mt-8 gap-6">
-            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-                <img src="public//toh.png" alt="Forest Honey" class="rounded-2xl">
-                <div class="flex flex-col items-center px-4">
-                    <h3 class="font-semibold text-2xl">FOREST <br>HONEY</h3>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+            <div class="flex flex-col sm:flex-row items-center bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl text-center sm:text-left">
+                <img src="public//toh.png" alt="Forest Honey" class="rounded-2xl mb-4 sm:mb-0 sm:mr-4 max-w-[150px] sm:max-w-[120px] object-contain">
+                <div class="flex flex-col items-center sm:items-start px-2">
+                    <h3 class="font-semibold text-2xl">FOREST HONEY</h3>
+                    <p class="text-sm text-neutral-600 mt-2">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
                 </div>
             </div>
 
-            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-                <img src="public//toh2.png" alt="Creamed Honey" class="rounded-2xl">
-                <div class="flex flex-col items-center px-4">
-                    <h3 class="font-semibold text-2xl">CREAMED<br>HONEY</h3>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+            <div class="flex flex-col sm:flex-row items-center bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl text-center sm:text-left">
+                <img src="public//toh2.png" alt="Creamed Honey" class="rounded-2xl mb-4 sm:mb-0 sm:mr-4 max-w-[150px] sm:max-w-[120px] object-contain">
+                <div class="flex flex-col items-center sm:items-start px-2">
+                    <h3 class="font-semibold text-2xl">CREAMED HONEY</h3>
+                    <p class="text-sm text-neutral-600 mt-2">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
                 </div>
             </div>
 
-            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-                <img src="public//toh3.png" alt="Meadow Honey" class="rounded-2xl">
-                <div class="flex flex-col items-center px-4">
-                    <h3 class="font-semibold text-2xl">MEADOW<br>HONEY</h3>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+            <div class="flex flex-col sm:flex-row items-center bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl text-center sm:text-left">
+                <img src="public//toh3.png" alt="Meadow Honey" class="rounded-2xl mb-4 sm:mb-0 sm:mr-4 max-w-[150px] sm:max-w-[120px] object-contain">
+                <div class="flex flex-col items-center sm:items-start px-2">
+                    <h3 class="font-semibold text-2xl">MEADOW HONEY</h3>
+                    <p class="text-sm text-neutral-600 mt-2">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
                 </div>
             </div>
 
-            <div class="flex flex-row bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-                <img src="public//toh4.png" alt="Liquid Honey" class="rounded-2xl">
-                <div class="flex flex-col items-center px-4">
-                    <h3 class="font-semibold text-2xl">LIQUID <br>HONEY</h3>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
+            <div class="flex flex-col sm:flex-row items-center bg-white p-6 h-auto shadow-md transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl text-center sm:text-left">
+                <img src="public//toh4.png" alt="Liquid Honey" class="rounded-2xl mb-4 sm:mb-0 sm:mr-4 max-w-[150px] sm:max-w-[120px] object-contain">
+                <div class="flex flex-col items-center sm:items-start px-2">
+                    <h3 class="font-semibold text-2xl">LIQUID HONEY</h3>
+                    <p class="text-sm text-neutral-600 mt-2">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</p>
                 </div>
             </div>
         </div>
