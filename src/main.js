@@ -78,6 +78,56 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 const motionSections = document.querySelectorAll('section:not(.hero-section), footer');
 const interactiveButtons = document.querySelectorAll('button, .product-card, section a');
 
+// Shopping cart stays independent from the motion layer so animations never
+// interfere with adding items, opening the drawer, or updating totals.
+const cartButton = document.getElementById('cart-btn');
+const cartPanel = document.getElementById('cart-panel');
+const cartClose = document.getElementById('cart-close');
+const cartBackdrop = document.getElementById('cart-backdrop');
+const cartItems = document.getElementById('cart-items');
+const cartCount = document.getElementById('cart-count');
+const cartTotal = document.getElementById('cart-total');
+const cart = [];
+
+const renderCart = () => {
+  if (!cartItems || !cartCount || !cartTotal) return;
+  cartItems.innerHTML = cart.length
+    ? cart.map((item, index) => `<div class="flex items-center justify-between gap-3"><div><strong class="block text-neutral-900">${item.name}</strong><span>$${item.price.toFixed(2)}</span></div><button type="button" class="remove-cart-item text-xs font-bold text-orange-600" data-index="${index}">REMOVE</button></div>`).join('')
+    : '<p id="cart-empty">Your cart is empty.</p>';
+  cartCount.textContent = String(cart.length);
+  cartTotal.textContent = `$${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}`;
+  cartItems.querySelectorAll('.remove-cart-item').forEach((button) => {
+    button.addEventListener('click', () => {
+      cart.splice(Number(button.dataset.index), 1);
+      renderCart();
+    });
+  });
+};
+
+const setCartOpen = (open) => {
+  if (!cartPanel || !cartButton || !cartBackdrop) return;
+  cartPanel.classList.toggle('translate-x-full', !open);
+  cartPanel.setAttribute('aria-hidden', String(!open));
+  cartButton.setAttribute('aria-expanded', String(open));
+  cartBackdrop.classList.toggle('hidden', !open);
+  document.body.classList.toggle('overflow-hidden', open);
+};
+
+cartButton?.addEventListener('click', () => setCartOpen(true));
+cartClose?.addEventListener('click', () => setCartOpen(false));
+cartBackdrop?.addEventListener('click', () => setCartOpen(false));
+document.querySelectorAll('.add-to-cart').forEach((button) => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.flex.flex-col');
+    const name = card?.querySelector('h4')?.textContent?.trim() || 'Honey';
+    const price = Number.parseFloat(card?.querySelector('.text-orange-600')?.textContent?.replace(/[^0-9.]/g, '') || '0');
+    cart.push({ name, price });
+    renderCart();
+    setCartOpen(true);
+    gsap.fromTo(cartButton, { scale: 1 }, { scale: 1.16, duration: 0.16, yoyo: true, repeat: 1, ease: 'power2.out' });
+  });
+});
+
 if (!reduceMotion) {
   const motionContext = gsap.context(() => {
     const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
