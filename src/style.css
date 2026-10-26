@@ -75,4 +75,36 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Motion support: transforms stay on the compositor for smoother scrolling. */
+.hero-section .floating-item,
+.hero-section .relative.z-10 > img,
+#contact img,
+#gallery img,
+#product .grid > div,
+button,
+a {
+  will-change: transform;
+}
+
+#gallery img {
+  transition: filter 0.5s ease, box-shadow 0.5s ease;
+}
+
+#gallery img:hover {
+  filter: saturate(1.12) contrast(1.04);
+  box-shadow: 0 18px 32px rgba(106, 70, 38, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
